@@ -1,0 +1,8 @@
+The provided bash script (Question2.sh) does the following:
+1- compiles the binary_search.c source code and produces binary_search executable file
+2- moves the executable binary_search file into /usr/local/bin with previlage user so requires password
+3- executes the binary_search from current directory (which doesn't contain the exe file anymore)
+
+
+So now we can run binary_search from anywhere why?
+Beacause it's now inside the usr/local/bin directory which is included in the PATH variable
