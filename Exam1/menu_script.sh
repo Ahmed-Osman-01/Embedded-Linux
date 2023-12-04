@@ -2,23 +2,30 @@
 
 PS3='Please select your choice: '
 
-select opt in "Option 1" "Option 2" "Option 3" "Quit"
+select opt in "Display Date" "Display Uptime" "Display logged users" "Quit"
 do
 	case $opt in
-		"Option 1")
+		"Display Date")
+			echo -e "Date:\n"
 			date
+			echo -e "\n"
 			;;
-		"Option 2")
+		"Display Uptime")
+			echo -e "Uptime:\n"
 			uptime
+			echo -e "\n"
 			;;
-		"Option 3")
-			users
+		"Display logged users")
+			echo -e "Users Info:\n"
+			w
+			echo -e "\n"
 			;;
 		"Quit")
 			break
 			;;
 		*)
 			echo "Invalid Option!"
+			echo -e "\n"
 			;;
 	esac
 done
